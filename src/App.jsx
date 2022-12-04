@@ -47,11 +47,28 @@ function App() {
             ? <div><button onClick={copy} className='Copy'>Copy</button><button className='Delete' onClick={()=>setContraseña('')}>Delete</button></div> : null}
           </div>
           <form>
-            <label>Num... Caracteres</label><input value={rango} type="range" name='NumCaracteres' onChange={handleChangeRange} min='8' max='30'/><label>{rango}</label><br />
-            <label>Incluir Numeros</label><input onChange={handleChangeCheck} className='check' name='Number' type="checkbox" /><br />
-            <label>Incluir Mayusculas</label><input onChange={handleChangeCheck} name='CapitalLetters' type="checkbox" /><br />
-            <label>Incluir caracter especiales</label><input onChange={handleChangeCheck} name='Special' type="checkbox" /><br />
-            <input onClick={handleSubmit} type="submit" value="Generar" />
+            <div className="rangoC">
+              <p className='numC'>Numero de Caracteres</p>
+              <div>
+                <input value={rango} type="range" name='NumCaracteres' onChange={handleChangeRange} min='8' max='30'/><p>{rango}</p>
+              </div>
+            </div>
+            <div>
+              <p>Incluir Numeros</p>
+              <input id='includeNum' onChange={handleChangeCheck} className='check' name='Number' type="checkbox" />
+              <label className='label' for='includeNum'>000</label>
+            </div>
+            <div>
+              <p>Incluir Mayusculas</p>
+              <input id='includeMayus' onChange={handleChangeCheck} name='CapitalLetters' type="checkbox" />
+              <label className='label' for='includeMayus'>000</label>
+            </div>
+            <div>
+              <p>Incluir C.Especial</p>
+              <input id='includeSpecial' onChange={handleChangeCheck} name='Special' type="checkbox" />
+              <label className='label' for='includeSpecial'>000</label>
+            </div>
+            <input className='Submitxd' onClick={handleSubmit} type="submit" value="Generar" />
           </form>
       </div>
     </div>

@@ -5,7 +5,8 @@
 }
 
 .App{
-  background: linear-gradient(to top left, #972b2b, #553ca0 );
+  background: linear-gradient(to top left, #140b0b, #140346 );
+  /* background: linear-gradient(to top left, #972b2b, #553ca0 ); */
   width: 100%;
   height: 100%;
   position: fixed;
@@ -16,10 +17,12 @@
 
 .container{
   backdrop-filter: blur(30px);
-  background-color: #ffffff28;
+  background-color: #07020228;
+  /* background-color: #ffffff28; */
   border-radius: 4px;
   padding: 4vh;
   box-shadow: 0px 0px 13px #ffffff28;
+  width: 300px;
 }
 
 .PassGenerada{
@@ -48,11 +51,87 @@
   border: 0;
   margin-right: 5px;
 }
-form input[type=checkbox]{
-  visibility: hidden;
+
+form{
+  margin-top: 25px;
+  background-color: #383737;
+  padding: 15px;
+  color: #fff;
 }
 
-form input[type=checkbox]:checked{
-  background-color: red;
-  width: 300px;
+form input[type=checkbox]{
+  display: none;
+}
+
+form div{
+  display: flex;
+  justify-content: flex-end;
+}
+
+form div p{
+  justify-content: flex-start;
+  float: left;
+  text-align: left;
+  width: 100%;
+}
+
+form div label{
+  justify-content: flex-end;
+}
+
+form label{
+  margin-left: 10%;
+  position: relative;
+  padding: 3px 5px;
+  width: max-content;
+  height: 19px;
+  color: transparent;
+}
+
+label::before{
+  content: '';
+  border: 0;
+  background-color: #c7c6c6;
+  border-radius: 50px;
+  width: 100%;
+  height: 3vh;
+  position: absolute;
+  left: 0;
+}
+
+label::after{
+  content: '';
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #909090;
+  border: 0;
+  position: absolute;
+  top: 22%;
+  left: 3px;
+  transition: all 0.3s;
+}
+
+[type=checkbox]:checked ~ label::after{
+  left: 45%;
+  background-color: #9b93f4;
+}
+
+[type=checkbox]:checked ~ label::before{
+  background-color: #2c2cf6;
+}
+
+.rangoC{
+  display: flex;
+  flex-direction: column;
+}
+
+.Submitxd{
+  background-color: #157c15;
+  color: #fff;
+  padding: 3px 5px;
+  width: 100%;
+  margin-top: 10px;
+  border: 0;
+  cursor: pointer;
 }
