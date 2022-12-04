@@ -58,7 +58,7 @@ function App() {
       </div>
       <div className={alertB ? "alerta" : 'sinAlerta'}>
         <button onClick={()=>setAlertB(false)}>X</button>
-        <h2>Mensaje Copiado con Exito</h2>
+        <h2>Contraseña Copiado con Exito</h2>
       </div>
           <div className='contra'>
               <input className='PassGenerada' placeholder='Generar Nueva Contraseña' type="text" disabled ref={pass} value={contraseña} />  
