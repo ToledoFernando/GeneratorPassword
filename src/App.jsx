@@ -16,6 +16,7 @@ function App() {
   const [config, setConfig] = useState(initial);
   const [rango, setRango] = useState(8);
   const [contraseña, setContraseña] = useState('');
+  const [alertB, setAlertB] = useState(false);
   const pass = useRef();
   const title = useRef();
 
@@ -36,6 +37,7 @@ function App() {
 
   const copy = () => {
     navigator.clipboard.writeText(contraseña).then(()=>{
+      setAlertB(true)
       navigator.clipboard.readText()
     })
   }
@@ -48,12 +50,15 @@ function App() {
     });
   },[])
 
-
   return (
     <div className="App">
       <div className="container">
       <div className='titulo'>
         <h1 ref={title}></h1>
+      </div>
+      <div className={alertB ? "alerta" : 'sinAlerta'}>
+        <button onClick={()=>setAlertB(false)}>X</button>
+        <h2>Mensaje Copiado con Exito</h2>
       </div>
           <div className='contra'>
               <input className='PassGenerada' placeholder='Generar Nueva Contraseña' type="text" disabled ref={pass} value={contraseña} />  

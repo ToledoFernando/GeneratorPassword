@@ -152,3 +152,28 @@ label::after{
   transform: scale(2);
   margin-top: 10px;
 }
+
+.alerta{
+  background-color: #359f35;
+  position: absolute;
+  width: 92%;
+  top: -60px;
+  left: 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 8px;
+}
+
+.alerta button{
+  float: right;
+  padding: 0;
+  background-color: transparent;
+  font-size: 15px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.sinAlerta{
+  display: none;
+}
