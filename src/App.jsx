@@ -1,6 +1,8 @@
 import {useState, useRef} from 'react';
 import newPassword from './newPassword';
 import './App.css';
+import Typed from 'typed.js';
+import { useEffect } from 'react';
 
 const initial = {
   NumCaracteres: 8,
@@ -15,6 +17,7 @@ function App() {
   const [rango, setRango] = useState(8);
   const [contraseña, setContraseña] = useState('');
   const pass = useRef();
+  const title = useRef();
 
   const handleSubmit = (e)=>{
     e.preventDefault();
@@ -37,10 +40,21 @@ function App() {
     })
   }
 
-  console.timeStamp();
+  useEffect(()=>{
+    var typed = new Typed(title.current, {
+      strings: ["Toledo","Generator Password"],
+      typeSpeed: 50,
+      backSpeed: 50
+    });
+  },[])
+
+
   return (
     <div className="App">
       <div className="container">
+      <div className='titulo'>
+        <h1 ref={title}></h1>
+      </div>
           <div className='contra'>
               <input className='PassGenerada' placeholder='Generar Nueva Contraseña' type="text" disabled ref={pass} value={contraseña} />  
             {contraseña.length 
