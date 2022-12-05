@@ -1,3 +1,3 @@
 # GeneratorPassword
 
-Link Deploy en [Vercel](https://generator-password-zeta.vercel.app/)
+[Deploy](https://generator-password-zeta.vercel.app/)
