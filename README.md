@@ -9,6 +9,6 @@ Incluye:
 - Mayusculas
 - Caracter especiales
 
-### Creado con Vite + ReactJS v
+### Creado con Vite + ReactJS v^3.2.3
 
 [Deploy](https://generator-password-zeta.vercel.app/)
