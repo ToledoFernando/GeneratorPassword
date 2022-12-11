@@ -44,7 +44,7 @@ function App() {
 
   useEffect(()=>{
     var typed = new Typed(title.current, {
-      strings: ["Toledo","Generator Password"],
+      strings: ["Toledo","Password Generator"],
       typeSpeed: 50,
       backSpeed: 50
     });
